@@ -1,18 +1,103 @@
-# Salesforce DX Project: Next Steps
+HandsMen Threads – Salesforce CRM Project
+Welcome to the official Salesforce implementation for HandsMen Threads: Elevating the Art of Sophistication in Men's Fashion.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+This project delivers a tailored CRM system built on Salesforce to manage customer orders, product inventory, loyalty programs, and automated email communication.
 
-## How Do You Plan to Deploy Your Changes?
+Project Highlights
+This Salesforce solution helps HandsMen Threads streamline:
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+Customer relationship management
 
-## Configure Your Salesforce DX Project
+Product ordering and inventory
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+Loyalty reward programs
 
-## Read All About It
+Automated email alerts and flows
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+User roles, permissions, and security
+
+What’s Included
+Custom Objects
+Object Name	Description
+HandsMen_Customer__c	Manages customer information and loyalty
+HandsMen_Order__c	Tracks order status and quantity
+HandsMen_Product__c	Stores product catalog
+Inventory__c	Manages stock and product availability
+Marketing_Campaign__c	Organizes marketing events
+
+Automation Components
+Flows
+
+Order Confirmation Email
+
+Low Stock Email Alert
+
+Scheduled Loyalty Tier Update
+
+Apex Code
+
+OrderTriggerHandler: validates quantity rules
+
+OrderTrigger: handles before-insert and before-update events
+
+Batch Apex
+
+LoyaltyPointsBatch: updates weekly customer points
+
+InventorySyncBatch: synchronizes stock daily
+
+Security & Access
+Custom Profiles and Roles
+
+Fine-tuned Permission Sets
+
+Lightning App
+Custom Salesforce Lightning App: HandsMen Threads, featuring:
+
+HandsMen Customers
+
+Orders
+
+Products
+
+Inventory
+
+Marketing Campaigns
+
+Reports and Dashboards
+
+Email Templates
+Formatted Classic Email Templates for:
+
+Order Confirmation
+
+Low Stock Alert
+
+Loyalty Program Congratulations
+
+Project Setup (Using Salesforce CLI)
+Log in to your org:
+
+bash
+Copy
+Edit
+sf org login web -a handsmen-dev
+Deploy metadata to your org:
+
+bash
+Copy
+Edit
+sf project deploy start -o handsmen-dev
+Assign permission sets to users:
+
+bash
+Copy
+Edit
+sf force:user:permset:assign -n Permission_Platform_1
+Test flows, triggers, and batch jobs from the UI or Developer Console.
+
+Author
+Shubhra Rai D
+
+Need Help?
+Open an issue, start a discussion, or submit a pull request. Let’s elevate this project together!
